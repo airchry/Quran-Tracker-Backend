@@ -7,7 +7,10 @@ import playersRouter from "./routes/player.js"
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors({
+  origin: "https://quran-tracker-eosin.vercel.app" 
+}));
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
