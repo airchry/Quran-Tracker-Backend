@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: "https://quran-tracker-eosin.vercel.app" 
+  origin: "https://quran-tracker-eosin.vercel.app" || "http://localhost:5173" 
 }));
 
 app.use(express.json());
